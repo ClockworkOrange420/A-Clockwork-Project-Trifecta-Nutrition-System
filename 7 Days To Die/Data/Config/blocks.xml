@@ -17690,7 +17690,7 @@
 	<block id="973" name="plantedSoy2">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="Dev"/>
-		<property name="CustomIcon" value="plantedPotato2"/>
+		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
 		<property name="PlantGrowing.Next" value="plantedSoy3Harvest"/>
