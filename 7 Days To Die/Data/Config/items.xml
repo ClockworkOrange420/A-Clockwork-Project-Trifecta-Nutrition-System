@@ -6475,7 +6475,7 @@
 		<property name="Material" value="organic"/>
 		<property name="EconomicValue" value="80"/>
 		<property name="HoldType" value="3"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property class="Action1">
 			<property name="Class" value="Eat"/>
@@ -6865,7 +6865,7 @@
 		<property name="Meshfile" value="Items/Misc/raw_meatPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="3"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="20"/>
 		<property name="SellableToTrader" value="false"/>
@@ -6917,7 +6917,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="22"/>
 		<property name="SellableToTrader" value="false"/>
@@ -6940,7 +6940,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="24"/>
 		<property class="Action1">
@@ -6962,7 +6962,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="52"/>
 		<property class="Action1">
@@ -6984,7 +6984,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="60"/>
 		<property name="CustomIcon" value="Bear_Stew"/>
@@ -7106,7 +7106,7 @@
 		<property name="Meshfile" value="Items/Food/blueberry_piePrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="60"/>
 		<property class="Action1">
@@ -7148,7 +7148,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="64"/>
 		<property class="Action1">
@@ -7199,7 +7199,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="50"/>
 		<property class="Action1">
@@ -9014,7 +9014,7 @@
 		<property name="Meshfile" value="Items/Crafting/beaker"/>
 		<property name="Material" value="glass"/>
 		<property name="HoldType" value="3"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="1"/>
 		<!-- STK loot -->
 		<property name="Weight" value="15"/>
 		<property name="EconomicValue" value="750"/>
@@ -9317,7 +9317,7 @@
 		<property name="Meshfile" value="Items/Food/vegetable_potato_bakedPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="15"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="CustomIcon" value="mushrooms"/>
 		<property name="CustomIconTint" value="b4895a"/>
 		<property name="EconomicValue" value="10"/>
@@ -9341,7 +9341,7 @@
 		<property name="Meshfile" value="Items/Food/corn_cooked"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="15"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="CustomIcon" value="cornOnTheCob"/>
 		<property name="CustomIconTint" value="ffd700"/>
 		<property name="EconomicValue" value="10"/>
@@ -9563,7 +9563,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="10"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -9769,7 +9769,7 @@
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="SellableToTrader" value="false"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="CraftingIngredientTime" value="15"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -9793,7 +9793,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="20"/>
 		<property name="SellableToTrader" value="false"/>
 		<property name="CraftingIngredientTime" value="15"/>
@@ -9819,7 +9819,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property name="SellableToTrader" value="false"/>
 		<property name="CraftingIngredientTime" value="15"/>
@@ -9845,7 +9845,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property name="SellableToTrader" value="false"/>
 		<property name="CraftingIngredientTime" value="15"/>
@@ -9872,7 +9872,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="30"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -9893,7 +9893,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="20"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -9915,7 +9915,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -9937,7 +9937,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -9959,7 +9959,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -9981,7 +9981,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="20"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -10003,7 +10003,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -10025,7 +10025,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -10047,7 +10047,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="SellableToTrader" value="false"/>
 		<property class="Action1">
@@ -10070,7 +10070,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="20"/>
 		<property name="SellableToTrader" value="false"/>
 		<property class="Action1">
@@ -10093,7 +10093,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property name="SellableToTrader" value="false"/>
 		<property class="Action1">
@@ -10116,7 +10116,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property name="SellableToTrader" value="false"/>
 		<property class="Action1">
@@ -10139,7 +10139,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="CustomIcon" value="meatStew"/>
 		<property name="EconomicValue" value="40"/>
 		<property class="Action1">
@@ -10183,7 +10183,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="CustomIcon" value="meatStew"/>
 		<property class="Action1">
@@ -10230,7 +10230,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="15"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="10"/>
 		<property class="Action1">
 			<!-- UseAction -->
@@ -10252,7 +10252,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="3"/>
 		<property name="EconomicValue" value="15"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -10365,7 +10365,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="CustomIcon" value="meatStew"/>
 		<property class="Action1">
@@ -10388,7 +10388,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="CustomIcon" value="meatStew"/>
 		<property class="Action1">
@@ -10580,7 +10580,7 @@
 		<property name="Meshfile" value="Items/Misc/raw_meatPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="3"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="20"/>
 		<property name="SellableToTrader" value="false"/>
@@ -10606,7 +10606,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="22"/>
 		<property name="SellableToTrader" value="false"/>
@@ -10629,7 +10629,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="24"/>
 		<property class="Action1">
@@ -10651,7 +10651,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="HoldType" value="31"/>
 		<property name="Material" value="organic"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK food -->
 		<property name="EconomicValue" value="52"/>
 		<property class="Action1">
@@ -10672,7 +10672,7 @@
 		<property name="Meshfile" value="Items/Food/venison_stewPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="23"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="30"/>
 		<property name="CustomIcon" value="meatStew"/>
 		<property class="Action1">
@@ -10834,7 +10834,7 @@
 		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property name="EconomicValue" value="25"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property class="Action1">
@@ -10859,7 +10859,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="10"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -10881,7 +10881,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="10"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -10933,7 +10933,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="10"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
@@ -10955,7 +10955,7 @@
 		<property name="Material" value="organic"/>
 		<property name="HoldType" value="31"/>
 		<property name="EconomicValue" value="10"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
