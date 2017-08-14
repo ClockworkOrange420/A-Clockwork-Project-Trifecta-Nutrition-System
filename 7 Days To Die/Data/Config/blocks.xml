@@ -2552,8 +2552,8 @@
 	</block>
 	<block id="260" name="plantedPotato2">
 		<property name="Extends" value="cropsGrowingMaster"/>
-		<property name="CreativeMode" value="Dev"/>
 		<property name="CustomIcon" value="potatoSeed"/>
+		<property name="CreativeMode" value="Dev"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
 		<property name="PlantGrowing.Next" value="plantedPotato3Harvest"/>
@@ -17651,6 +17651,7 @@
 	</block>
 	<block id="972" name="plantedSoy1">
 		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey"/>
+		<property name="CustomIcon" value="SoyBeans"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
 		<property name="Collide" value="melee"/>
@@ -17667,7 +17668,7 @@
 	<block id="973" name="plantedSoy2">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="CreativeMode" value="Dev"/>
-		<property name="CustomIcon" value="SoyBeans"/>
+		<property name="CustomIcon" value="plantedPotato2"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
 		<property name="PlantGrowing.Next" value="plantedSoy3Harvest"/>
@@ -17676,6 +17677,7 @@
 	</block>
 	<block id="974" name="plantedSoy3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="CustomIcon" value="plantedPotato3Harvest"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 		<property name="Collide" value="melee"/>
