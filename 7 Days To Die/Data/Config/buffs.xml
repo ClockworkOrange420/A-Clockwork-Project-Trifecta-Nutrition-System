@@ -403,14 +403,14 @@ actions="debuff(burningSmall);attach(ParticleEffects/p_onFire, @impact);damage(0
 	<modify id="0" stat="wellness" amount="5" rate="1"/>
 </buff>
 
-<buff id="hungry" mutex="hungry2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(Nutrition, -2, 100t, 0, 0)" notificationClass="FoodBuffNotification" icon="ui_game_symbol_hunger" name_key="hungry" description_key="hungryDesc" tooltip_key="hungryTooltip" cures="shamSandwich,corn,canBeef,grilledMeat,baconAndEggs"/>
-<buff id="hungry2" buffif="+starve > 1200" debuffif="+full > 1" actions="increment(Nutrition, -1, 10t, 0, 0);debuff(hungry);damage(0,30,0,0)" notificationClass="FoodBuffNotification" icon="ui_game_symbol_hunger" name_key="hungry2" description_key="hungry2Desc" tooltip_key="hungry2Tooltip" cures="shamSandwich,corn,canBeef,grilledMeat,baconAndEggs">
+<buff id="hungry" mutex="hungry2" buffif="+starve > 1" debuffif="+full > 1" actions="increment(@wellness, -0.5, 150, 0, 0)" notificationClass="FoodBuffNotification" icon="ui_game_symbol_hunger" name_key="hungry" description_key="hungryDesc" tooltip_key="hungryTooltip" cures="shamSandwich,corn,canBeef,grilledMeat,baconAndEggs"/>
+<buff id="hungry2" buffif="+starve > 1200" debuffif="+full > 1" actions="increment(@wellness, -1, 30, 0, 0);debuff(hungry);damage(0,30,0,0)" notificationClass="FoodBuffNotification" icon="ui_game_symbol_hunger" name_key="hungry2" description_key="hungry2Desc" tooltip_key="hungry2Tooltip" cures="shamSandwich,corn,canBeef,grilledMeat,baconAndEggs">
 	<modify id="0" stat="stamina" amount="-3" rate="1"/>
 	<modify id="1" stat="health" amount="-1" rate="30"/>
 </buff>
 
-<buff id="thirsty" mutex="thirsty2" buffif="+thirst > 1" debuffif="+hydrated > 5" actions="increment(Nutrition, -2, 100t, 0, 0)" notificationClass="WaterBuffNotification" icon="ui_game_symbol_thirst" name_key="thirsty" description_key="thirstyDesc" tooltip_key="thirstyTooltip" cures="canMurkyWater,canBoiledWater,bottledWater,goldenRodTea,redTea"/>
-<buff id="thirsty2" notificationClass="WaterBuffNotification" buffif="+thirst > 600" debuffif="+hydrated > 5" actions="increment(Nutrition, -1, 10t, 0, 0);debuff(thirsty);damage(0,30,0,0)" icon="ui_game_symbol_thirst" name_key="thirsty2" description_key="thirsty2Desc" tooltip_key="thirsty2Tooltip" cures="canMurkyWater,canBoiledWater,bottledWater,goldenRodTea,redTea">
+<buff id="thirsty" mutex="thirsty2" buffif="+thirst > 1" debuffif="+hydrated > 5" actions="increment(@wellness, -0.1, 30, 0, 0)" notificationClass="WaterBuffNotification" icon="ui_game_symbol_thirst" name_key="thirsty" description_key="thirstyDesc" tooltip_key="thirstyTooltip" cures="canMurkyWater,canBoiledWater,bottledWater,goldenRodTea,redTea"/>
+<buff id="thirsty2" notificationClass="WaterBuffNotification" buffif="+thirst > 600" debuffif="+hydrated > 5" actions="increment(@wellness, -1, 30, 0, 0);debuff(thirsty);damage(0,30,0,0)" icon="ui_game_symbol_thirst" name_key="thirsty2" description_key="thirsty2Desc" tooltip_key="thirsty2Tooltip" cures="canMurkyWater,canBoiledWater,bottledWater,goldenRodTea,redTea">
 	<modify id="0" stat="stamina" amount="-3" rate="1"/>
 	<modify id="1" stat="health" amount="-1" rate="30"/>
 </buff>
@@ -583,7 +583,7 @@ snowberryPlant feeds you for 90 sec. -->
 	<modify id="0" stat="health" amount="1" rate="5" />
 </buff>
 
-<buff id="cured2" stack="reset" duration="2400t" actions="increment(Nutrition, 3, 100t, 0, 0)" icon="ui_game_symbol_pills" name_key="Vitamins" description_key="Increases nutrition slowly over time." tooltip_key="Slowly Increases Nutrition." />
+<buff id="cured2" stack="reset" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" duration="2400t" actions="increment(Nutrition, 3, 100t, 0, 0)" icon="ui_game_symbol_pills" name_key="Vitamins" description_key="Increases nutrition slowly over time." tooltip_key="Slowly Increases Nutrition." />
 
 <buff id="warmByFire" onexpired="warmByFire2" duration="10" stack="discard" buffif="+heatSource gequal 1" debuffif="+heatSource less 1" type="coretemp" icon="ui_game_symbol_campfire" name_key="warmByFire" description_key="warmByFireDesc" tooltip_key="warmByFireTooltip">
 	<modify id="0" stat="coretemp" modifyValue="30"/>
@@ -685,14 +685,14 @@ snowberryPlant feeds you for 90 sec. -->
 </buff>
 
 <!--Nutrition System 100% uptime for metabolic rates 1/1 ratio with food loss-->
-<buff id="Single5" mutex="Single10,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.5, 50t, 0, 0)" /><!--never/counter-->
-<buff id="Single10" mutex="Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.55, 50t, 0, 0);debuff(Single5)" /><!--1/30Day-->
+<buff id="Single5" mutex="NutritionHighLock,Single10,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.5, 50t, 0, 0)" /><!--never/counter-->
+<buff id="Single10" mutex="NutritionHighLock,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.55, 50t, 0, 0);debuff(Single5)" /><!--1/30Day-->
 
-<buff id="Bifecta5" mutex="Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.575, 50t, 0, 0);debuff(Single5);debuff(Single10)" icon="server_peer" name_key="Half Peak Bifecta" description_key="You are at half peak in two food groups and are benifiting from a Half Peak Bifecta." tooltip_key="Half Peak Bifecta" /><!--1/20Day-->
-<buff id="Bifecta10" mutex="Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.6, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5)" icon="ui_game_symbol_allies" name_key="Full Peak Bifecta" description_key="You are at full peak in two food groups and are benifiting from a Half Peak Bifecta." tooltip_key="Full Peak Bifecta" /><!--1/15Day-->
+<buff id="Bifecta5" mutex="NutritionHighLock,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.575, 50t, 0, 0);debuff(Single5);debuff(Single10)" icon="server_peer" name_key="Half Peak Bifecta" description_key="You are at half peak in two food groups and are benifiting from a Half Peak Bifecta." tooltip_key="Half Peak Bifecta" /><!--1/20Day-->
+<buff id="Bifecta10" mutex="NutritionHighLock,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.6, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5)" icon="ui_game_symbol_allies" name_key="Full Peak Bifecta" description_key="You are at full peak in two food groups and are benifiting from a Half Peak Bifecta." tooltip_key="Full Peak Bifecta" /><!--1/15Day-->
 
-<buff id="Trifecta5" mutex="Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5);debuff(Bifecta10)" icon="server_friends" name_key="Half Peak Trifecta" description_key="You are at half peak in three food groups and are benifiting from a Half Peak Trifecta." tooltip_key="Half Peak Trifecta" /><!--1/3Day-->
-<buff id="Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1.25, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5);debuff(Bifecta10);debuff(Trifecta5)" icon="ui_game_symbol_players" name_key="Full Peak Trifecta" description_key="You are at full peak in three food groups and are benifiting from a Half Peak Trifecta." tooltip_key="Full Peak Trifecta" /><!--1/2day/72tic/+base24/T/48-->
+<buff id="Trifecta5" mutex="NutritionHighLock,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5);debuff(Bifecta10)" icon="server_friends" name_key="Half Peak Trifecta" description_key="You are at half peak in three food groups and are benifiting from a Half Peak Trifecta." tooltip_key="Half Peak Trifecta" /><!--1/3Day-->
+<buff id="Trifecta10" mutex="NutritionHighLock" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1.25, 50t, 0, 0);debuff(Single5);debuff(Single10);debuff(Bifecta5);debuff(Bifecta10);debuff(Trifecta5)" icon="ui_game_symbol_players" name_key="Full Peak Trifecta" description_key="You are at full peak in three food groups and are benifiting from a Half Peak Trifecta." tooltip_key="Full Peak Trifecta" /><!--1/2day/72tic/+base24/T/48-->
 
 <buff id="NegativeSingle15" mutex="NegativeSingle20,NegativeSingle25,NegativeSingle30,NegativeSingle35,NegativeSingle40,NegativeSingle45,NegativeSingle50" duration="0" debuffif="Nutrition less 1" actions="increment(Nutrition, -0.5, 100t, 0, 0);debuff(Single10)" /><!--Down1stage/2Days36-24=12-->
 <buff id="NegativeSingle20" mutex="NegativeSingle25,NegativeSingle30,NegativeSingle35,NegativeSingle40,NegativeSingle45,NegativeSingle50" duration="0" debuffif="Nutrition less 1" actions="increment(Nutrition, -1.15, 100t, 0, 0);debuff(NegativeSingle15)" />
@@ -708,6 +708,7 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="NutritionReset" duration="3" onexpired="NutritionStartLock" mutex="NutritionStartLock" actions="setvar(Nutrition, 360)" />
 <buff id="NutritionStartLock"/>
 <buff id="NutritionLowLock" buffif="Nutrition lequal 0" debuffif="Nutrition gequal 1" />
+<buff id="NutritionHighLock" buffif="Nutrition gequal 648" debuffif="Nutrition lequal 647" />
 <buff id="NutritionBase" buffif="Nutrition greater 0" debuffif="Nutrition less 1" actions="increment(Nutrition, -1, 100t, 0, 0)" /><!--1stage/3day/72ticks/24perday-->
 
 <buff id="NutritionAmazing" mutex="" buffif="Nutrition gequal 576" debuffif="Nutrition lequal 575" actions="increment(@wellness, 1, 2400t, 0, 0);debuff(NutritionBest);debuff(NutritionGreat);debuff(NutritionGood);debuff(NutritionNeutral);debuff(NutritionLow);debuff(NutritionBad);debuff(NutritionVeryBad);debuff(NutritionExtremelyBad)" icon="ui_game_symbol_block_repair" name_key="Amazing Nutrition" description_key="Amazing Nutritional Level." tooltip_key="Amazing Nutritional Level." />
@@ -725,9 +726,9 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="eatMedBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -1.2, 1, 0, 0)"/>1/2Stage
 <buff id="eatLargeBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -2.4, 1, 0, 0)"/>1Stage
 
-<buff id="eatSmallGood" duration="30" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.6, 1, 0, 0)"/>
-<buff id="eatMedGood" duration="30" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1.2, 1, 0, 0)"/>
-<buff id="eatLargeGood" duration="30" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 2.4, 1, 0, 0)"/>
+<buff id="eatSmallGood" duration="30" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.6, 1, 0, 0)"/>
+<buff id="eatMedGood" duration="30" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1.2, 1, 0, 0)"/>
+<buff id="eatLargeGood" duration="30" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 2.4, 1, 0, 0)"/>
 
 
 
