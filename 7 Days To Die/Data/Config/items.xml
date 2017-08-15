@@ -10311,7 +10311,7 @@
 			<property name="Sound_start" value="player_drinking"/>
 			<property name="Buff" value="recoveringTiny"/>
 			<property name="Create_item" value="emptyJar"/>
-			<property name="Buff" value="eatFruit"/>
+			<property name="Buff" value="eatFruit,recoveringTiny"/>
 		</property>
 		<property name="DescriptionKey" value="honeyPoulticeDesc"/>
 		<property name="CraftingSkillGroup" value="craftSkillScience"/>
