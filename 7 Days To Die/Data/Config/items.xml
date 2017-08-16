@@ -8073,7 +8073,6 @@
 		<property name="DescriptionKey" value="plantedAloe3HarvestDesc"/>
 	</item>
 	<item id="1316" name="chrysanthemumPlant">
-		<property name="CustomIcon" value="plantedChrysanthemum3Harvest"/>
 		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
@@ -8300,7 +8299,6 @@
 		<!-- <property name="RepairTime" value="2"/><property name="RepairAmount" value="400"/> -->
 	</item>
 	<item id="1334" name="cottonPlant">
-		<property name="CustomIcon" value="plantedCotton3Harvest"/>
 		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
