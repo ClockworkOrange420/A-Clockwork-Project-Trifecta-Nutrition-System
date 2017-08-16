@@ -294,22 +294,22 @@ The "MetabolizeBeer" buff will slowly reduce the beer variable.
 <buff id="infection" duration="1" onexpired="infectionReset" mutex="cured,infectionBase" actions="setvar(infected, 0)" type="sickness"/>
 <buff id="infectionReset" duration="1" mutex="cured" actions="increment(infected, 10, 0, 0, 1);buff(infectionBase)" type="sickness" />
 <buff id="infectionBase" ondebuff="cured" debuffif="infected less 1" mutex="cured" actions="increment(infected, 2, 4t, 0, 0);increment(fatigue, 1, 100t, 0, 0);increment(@wellness, -0.1, 100t, 0, 0)" type="sickness"/>
-<buff id="infectionNotification" mutex="infection1,infection2,infection3" buffif="infected gequal 240" debuffif="infected less 1" type="sickness" icon="ui_game_symbol_infection" name_key="Minor Infection" description_key="Close inspection reveals a minor infection." tooltip_key="Minor Infection" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
+<buff id="infectionNotification" buffif="infected gequal 240" mutex="infection1,infection2,infection3" debuffif="infected less 1" type="sickness" icon="ui_game_symbol_infection" name_key="Minor Infection" description_key="Close inspection reveals a minor infection." tooltip_key="Minor Infection" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
 	<modify id="1" stat="health" amount="-1" rate="60"/>
 	<modify id="2" stat="food" amount="-1" rate="30"/>
 	<modify id="3" stat="water" amount="-1" rate="30"/>
 </buff>
-<buff id="infection1" mutex="infection2,infection3" buffif="infected gequal 960" debuffif="infected lequal 959" actions="debuff(infectionNotification)" type="sickness" icon="ui_game_symbol_infection" name_key="Infection" description_key="infection1Desc" tooltip_key="infection1Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
+<buff id="infection1" buffif="infected gequal 960" debuffif="infected lequal 959" mutex="infection2,infection3" actions="debuff(infectionNotification);increment(fatigue, 1, 100t, 0, 0)" type="sickness" icon="ui_game_symbol_infection" name_key="Infection" description_key="infection1Desc" tooltip_key="infection1Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
 	<modify id="1" stat="health" amount="-1" rate="30"/>
 	<modify id="2" stat="food" amount="-1" rate="30"/>
 	<modify id="3" stat="water" amount="-1" rate="30"/>
 </buff>
-<buff id="infection2" mutex="infection3" buffif="infected gequal 1920" debuffif="infected lequal 1919" actions="debuff(infection1);damage(2,100t,0,30)" type="sickness" icon="ui_game_symbol_infection" name_key="Major Infection" description_key="infection2Desc" tooltip_key="infection2Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
+<buff id="infection2" buffif="infected gequal 1920" debuffif="infected lequal 1919" mutex="infection3" actions="debuff(infection1);damage(2,100t,0,30);increment(fatigue, 1, 50t, 0, 0)" type="sickness" icon="ui_game_symbol_infection" name_key="Major Infection" description_key="infection2Desc" tooltip_key="infection2Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
 	<modify id="1" stat="health" amount="-1" rate="15"/>
 	<modify id="2" stat="food" amount="-1" rate="30"/>
 	<modify id="3" stat="water" amount="-1" rate="30"/>
 </buff>
-<buff id="infection3" buffif="infected gequal 2880" debuffif="infected lequal 2879" actions="debuff(infection2);damage(5,100t,0,15)" type="sickness" icon="ui_game_symbol_infection" name_key="Extreme Infection" description_key="infection3Desc" tooltip_key="infection3Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
+<buff id="infection3" buffif="infected gequal 2880" debuffif="infected lequal 2879" actions="debuff(infection2);damage(5,100t,0,15);increment(fatigue, 1, 50t, 0, 0)" type="sickness" icon="ui_game_symbol_infection" name_key="Extreme Infection" description_key="infection3Desc" tooltip_key="infection3Tooltip" cures="antibiotics,herbalAntibiotics,Honey_Poultice">
 	<modify id="1" stat="health" amount="-1" rate="5"/>
 	<modify id="2" stat="food" amount="-1" rate="30"/>
 	<modify id="3" stat="water" amount="-1" rate="30"/>
@@ -685,7 +685,7 @@ snowberryPlant feeds you for 90 sec. -->
 </buff>
 
 <!--Nutrition System 100% uptime for metabolic rates 1/1 ratio with food loss-->
-<buff id="Single5" mutex="NutritionHighLock,Single10,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.5, 50t, 0, 0)" icon="server_refresh" name_key="Half Peak Single" description_key="You are at half peak Single and countering base nutritional." tooltip_key="Half Peak Single" /><!--never/counter-->
+<buff id="Single5" mutex="NutritionHighLock,Single10,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.5, 50t, 0, 0)" icon="server_refresh" name_key="Half Peak Single" description_key="You are at half peak Single and countering base nutritional loss." tooltip_key="Half Peak Single" /><!--never/counter-->
 <buff id="Single10" mutex="NutritionHighLock,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.55, 50t, 0, 0);debuff(Single5)" icon="ui_game_symbol_ping" name_key="Full Peak Single" description_key="You are at full peak Single and will slowly increase nutrition by 1 stage every 30 days provided you do not have any negative food groups." tooltip_key="Full Peak Single" /><!--1/30Day-->
 
 <buff id="Bifecta5" mutex="NutritionHighLock,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.575, 50t, 0, 0);debuff(Single5);debuff(Single10)" icon="server_peer" name_key="Half Peak Bifecta" description_key="You are at half peak Bifecta and will slowly increase nutrition by 1 stage every 20 days provided you do not have any negative food groups." tooltip_key="Half Peak Bifecta" /><!--1/20Day-->
