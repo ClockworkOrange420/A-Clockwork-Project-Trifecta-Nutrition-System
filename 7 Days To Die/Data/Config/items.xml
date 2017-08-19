@@ -6768,7 +6768,7 @@
 		<property name="Meshfile" value="Items/Food/vegetable_corn"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="15"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property name="EconomicValue" value="10"/>
 		<property name="EconomicBundleSize" value="5"/>
@@ -8064,7 +8064,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<!-- UseAction -->
@@ -8090,7 +8090,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<!-- UseAction -->
@@ -8110,7 +8110,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<!-- UseAction -->
@@ -8336,7 +8336,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<!-- UseAction -->
@@ -8363,7 +8363,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<!-- UseAction -->
@@ -8405,7 +8405,7 @@
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="45"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property name="EconomicValue" value="10"/>
 		<property name="EconomicBundleSize" value="5"/>
@@ -8910,7 +8910,7 @@
 		<property name="Meshfile" value="Items/Food/seed_blueberryPrefab"/>
 		<property name="Material" value="plants"/>
 		<property name="HoldType" value="21"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="50"/>
 		<!-- STK resource -->
 		<property class="Action0">
 			<property name="Class" value="PlaceAsBlock"/>
@@ -9325,6 +9325,7 @@
 		<property name="EconomicValue" value="10"/>
 		<property name="EconomicBundleSize" value="5"/>
 		<property name="SellableToTrader" value="false"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action0">
 			<property name="Class" value="PlaceAsBlock"/>
 			<property name="Delay" value="0.5"/>
@@ -10286,6 +10287,7 @@
 		<property name="HoldType" value="23"/>
 		<property name="CraftingIngredientTime" value="5"/>
 		<property name="EconomicValue" value="10"/>
+		<property name="Stacknumber" value="50"/>
 		<property class="Action1">
 			<!-- UseAction -->
 			<property name="Class" value="Eat"/>
