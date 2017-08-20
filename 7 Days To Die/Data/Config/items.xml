@@ -6874,7 +6874,7 @@
 			<property name="Gain_water" value="0"/>
 			<property name="Gain_sickness" value="30"/>
 			<property name="Sound_start" value="player_eating"/>
-			<property name="Buff" value="foodPoisoning,6eatGrain,eatSmallBad"/>
+			<property name="Buff" value="foodPoisoning,6eatGrain,eatMedBad"/>
 			<property name="Buff_chance" value="0.5,1,1"/>
 		</property>
 		<property name="CraftingSkillGroup" value="craftSkillScience"/>

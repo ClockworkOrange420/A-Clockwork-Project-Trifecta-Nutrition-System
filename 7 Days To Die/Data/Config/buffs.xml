@@ -724,9 +724,9 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="NutritionExtremelyBad" mutex="NutritionAmazing,NutritionBest,NutritionGreat,NutritionGood,NutritionNeutral,NutritionLow,NutritionBad,NutritionVeryBad" buffif="Nutrition gequal 1" actions="increment(@wellness, -1, 600t, 0, 0);debuff(NutritionVeryBad)" icon="ui_game_symbol_block_damage" name_key="Extremely Bad Nutrition" description_key="Extremely Bad Nutritional Level decreases wellbess by 1 every 6 hours." tooltip_key="Extremely Bad Nutritional Level." />
 
 
-<buff id="eatSmallBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -0.6, 1, 0, 0)"/><!--1/4Stage-->
-<buff id="eatMedBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -1.2, 1, 0, 0)"/><!--1/2Stage-->
-<buff id="eatLargeBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -2.4, 1, 0, 0)"/><!--1Stage-->
+<buff id="eatSmallBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -0.3, 1, 0, 0)"/><!--1/8Stage-->
+<buff id="eatMedBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -0.6, 1, 0, 0)"/><!--1/4Stage-->
+<buff id="eatLargeBad" duration="30" mutex="NutritionLowLock" debuffif="Nutrition less 1" actions="increment(Nutrition, -1.2, 1, 0, 0)"/><!--1Stage-->
 
 <buff id="eatSmallGood" duration="30" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.6, 1, 0, 0)"/><!--1/4Stage-->
 <buff id="eatMedGood" duration="30" mutex="NutritionHighLock" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 1.2, 1, 0, 0)"/><!--1/2Stage-->
