@@ -10250,6 +10250,7 @@
 	<item id="1616" name="Chicken_Noodle_Soup">
 		<property name="Extends" value="Tomato_Soup"/>
 		<property class="Action1">
+			<property name="Gain_food" value="7"/>
 			<property name="Buff" value="5eatMeat,eatGrain"/>
 		</property>
 		<property name="DescriptionKey" value="chickenNoodleSoupDesc"/>
@@ -11059,6 +11060,7 @@
 	</item>
 	<item id="1667" name="Silencer">
 		<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 		<property name="Material" value="metal"/>
 		<property name="HoldType" value="45"/>
 		<property name="Stacknumber" value="1"/>
@@ -11067,5 +11069,29 @@
 		<property name="Weight" value="10"/>
 		<property name="DescriptionKey" value="SilencerDesc"/>
 		<property name="Group" value="Resources"/>
+	</item>
+	<item id="1668" name="Noodles">
+		<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="organic"/>
+		<property name="HoldType" value="31"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="EconomicBundleSize" value="5"/>
+		<property name="Stacknumber" value="50"/>
+		<property class="Action1">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Gain_health" value="0"/>
+			<property name="Gain_food" value="2"/>
+			<property name="Gain_water" value="-1"/>
+			<property name="Gain_stamina" value="0"/>
+			<property name="Gain_wellness" value="0"/>
+			<property name="Sound_start" value="player_eating"/>
+			<property name="Buff" value="2eatGrain"/>
+		</property>
+		<property name="Group" value="Food/Cooking"/>
+		<property name="DescriptionKey" value="wheatDesc"/>
 	</item>
 </items>

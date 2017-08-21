@@ -637,6 +637,7 @@
 <lootgroup name="weaponsPistol+ammo" count="all">
 	<item name="9mmBullet" count="1,30"/>
 	<item name="gunPistol" count="1"/>
+	<item name="gunPistolSilenced" count="1"/>
 </lootgroup>
 
 <lootgroup name="toiletLoot" count="1">
@@ -717,6 +718,7 @@
 
 <lootgroup name="weaponsCommonParts" loot_quality_template="baseTemplate"> <!-- weaponPartsTemplate -->
 	<item name="partsPistol_barrel"/>
+	<item name="Silencer"/>
 	<item name="partsPistol_parts"/>
 	<item name="partsPistol_receiver"/>
 	<item name="partsPistol_grip"/>
@@ -737,6 +739,7 @@
 	<item name="partsPistol_parts"/>
 	<item name="partsPistol_receiver"/>
 	<item name="partsPistol_grip"/>
+	<item name="Silencer"/>
 	<item name="partsPumpShotgun_barrel"/>
 	<item name="partsPumpShotgun_parts"/>
 	<item name="partsPumpShotgun_barrelShort"/>
@@ -939,6 +942,7 @@
 
 <lootgroup name="treasureGuns" count="1">
 	<item name="gunPistol"/>
+	<item name="gunPistolSilenced"/>
 	<item name="gun44Magnum"/>
 	<item name="gunSawedOffPumpShotgun"/>
 	<item name="gunPumpShotgun"/>
@@ -1066,9 +1070,10 @@
 
 <lootgroup name="cupboard">
 	<item name="canEmpty" count="1,3"/>
-	<item name="Crackers"/>
+	<item name="Crackers" count="1,3"/>
+	<item name="Noodles" count="1,3"/>
 	<item group="cannedfood" prob="0.5"/>
-	<item group="seeds" prob="0.5"/>
+	<item group="seeds" count="1,3" prob="0.5"/>
 	<item name="bottledWater" prob="0.5"/>
 	<item name="emptyJar" count="1,4"/>
 	<item group="sinkTools" count="1" prob="0.15"/>
@@ -1096,6 +1101,7 @@
 	<item name="paper" count="1,6" prob="0.7"/>
 	<item name="oldCash" count="1,6" prob="0.3"/>
 	<item name="cloth" count="1,4"/>
+	<item name="Silencer" count="1"/>
 	<item group="trophyGroup"/>
 	<item name="glassCTRSheet"/>
 	<item name="gunPowder" count="3,6"/>
@@ -1112,7 +1118,7 @@
 	<item name="ductTape" count="1,3"/>
 	<item group="rottenFood" count="1,2"/>
 	<item group="books"/>
-	<item group="seeds"/>
+	<item group="seeds" count="1,3"/>
 	<item group="questChallenge" count="1" prob="0.11"/> 	<!-- 0.06 = .23 % -->
 	<item group="treasureMaps" count="1" prob="0.092"/>
 </lootgroup>
@@ -1344,6 +1350,7 @@
 	<item group="motorToolParts"/>
 	<item group="nailgunParts"/>
 	<item group="weaponsCompoundBowParts"/>
+	<item group="weaponsCommonParts"/>
 	<item name="steelArrowHead" count="1,10"/>
 	<item name="ironArrowHead" count="1,10"/>
 	<item name="cookingGrill"/>
@@ -1730,7 +1737,7 @@
 </lootcontainer>
 
 <!-- player dropped backpacks, they only destroy on close when they are empty -->
-<lootcontainer id="41" count="0" size="5,11" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+<lootcontainer id="41" count="0" size="5,10" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
 	<item name="cobweb" count="1,2" prob="0.01"/>
 </lootcontainer>
 
