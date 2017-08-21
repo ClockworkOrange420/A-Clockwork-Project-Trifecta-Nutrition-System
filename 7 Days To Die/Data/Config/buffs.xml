@@ -568,7 +568,7 @@ snowberryPlant feeds you for 90 sec. -->
 	<modify id="1" stat="coretemp" modifyValue="15"/>
 </buff>
 
-<buff id="redPillBuff" duration="1" actions="debuff(recoveringCommon);setvar(infected, 0)"/>
+<buff id="redPillBuff" duration="1" actions="setvar(Fruit, 0);setvar(Meat, 0);setvar(Grain, 0);setvar(Veg, 0);setvar(Dairy, 0)"/>
 
 <buff id="bluePillBuff" duration="0" actions="increment(CTRbluePill, 1, 1, 0, 0)" icon="ui_game_symbol_hammer"
 	name_key="bluePillBuffName" description_key="bluePillBuffDesc" tooltip_key="bluePillBuffTooltip" causes="bluePill">
