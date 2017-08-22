@@ -689,7 +689,7 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="eatLotusExtractTrigger" duration="1" actions="increment(CTRlotus, 20, 0, 0, 1)"/>
 <buff id="MetabolizeLotusExtract" buffif="CTRlotus greater 0" debuffif="CTRlotus less 1" actions="increment(CTRlotus, -1, 3, 0, 0);min(CTRlotus, 0) "/>
 
-<buff id="lotusEuphoricBuff" duration="0" mutex="lotusPoisonBuff" buffif="CTRlotus gequal 2" debuffif="CTRlotus lequal 1" actions="increment(fatigue, -0.5, 50t, 0, 0)" icon="ui_game_symbol_drunk" name_key="Lotus Euphoria" description_key="A euphoric sensation washes over you and you get tired slower and heal faster" tooltip_key="A little more couldnt hurt">
+<buff id="lotusEuphoricBuff" duration="0" mutex="lotusPoisonBuff" buffif="CTRlotus gequal 2" debuffif="CTRlotus lequal 1" actions="increment(fatigue, -0.5, 50t, 0, 0)" icon="ui_game_symbol_drunk" name_key="Lotus Euphoria" description_key="A euphoric sensation washes over you and you get tired slower, can no longer be stunned and heal bones faster" tooltip_key="A little more couldnt hurt">
 	<modify id="3" buff="brokenLeg" tickrate="2"/>
 	<modify id="4" buff="sprainedLeg" tickrate="2"/>
 </buff>
