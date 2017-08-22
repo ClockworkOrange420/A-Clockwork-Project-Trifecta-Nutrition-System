@@ -1040,6 +1040,8 @@
 	<item name="Cheese"/>
 	<item name="Pizza"/>
 	<item name="HoneyHam"/>
+	<item name="slicedHam"/>
+	<item name="Pepperoni"/>
 	<item name="Pancakes"/>
 	<item name="BlueberryPancakes"/>
 	<item group="allStews"/>
