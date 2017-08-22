@@ -365,7 +365,7 @@ The "MetabolizeBeer" buff will slowly reduce the beer variable.
 	<modify id="0" stat="speedmodifier" mulValue="0.80"/>			
 </buff>-->
 
-<buff id="stunned" mutex="stunCooldown,painkillerBuff,Buzzed,Drunk,stunned" duration="4" onexpired="stunCooldown" type="speedmodifier" icon="ui_game_symbol_stunned" name_key="stunned" description_key="stunnedDesc" tooltip_key="stunnedTooltip">
+<buff id="stunned" mutex="stunCooldown,painkillerBuff,Buzzed,Drunk,stunned,lotusEuphoricBuff" duration="4" onexpired="stunCooldown" type="speedmodifier" icon="ui_game_symbol_stunned" name_key="stunned" description_key="stunnedDesc" tooltip_key="stunnedTooltip">
 	<modify id="0" stat="speedmodifier" mulValue="0.1"/>
 </buff>
 <buff id="stunCooldown" duration="3" stack="discard"/>
@@ -568,7 +568,7 @@ snowberryPlant feeds you for 90 sec. -->
 	<modify id="1" stat="coretemp" modifyValue="15"/>
 </buff>
 
-<buff id="redPillBuff" duration="1" actions="setvar(Fruit, 0);setvar(Meat, 0);setvar(Grain, 0);setvar(Veg, 0);setvar(Dairy, 0)"/>
+<buff id="redPillBuff" duration="1" actions="debuff(Speed)"/>
 
 <buff id="bluePillBuff" duration="0" actions="increment(CTRbluePill, 1, 1, 0, 0)" icon="ui_game_symbol_hammer"
 	name_key="bluePillBuffName" description_key="bluePillBuffDesc" tooltip_key="bluePillBuffTooltip" causes="bluePill">
@@ -686,6 +686,26 @@ snowberryPlant feeds you for 90 sec. -->
 	<modify id="1" stat="speedmodifier" mulValue="0.3" duration="3.2"/>
 </buff>
 
+<buff id="eatLotusExtractTrigger" duration="1" actions="increment(CTRlotus, 20, 0, 0, 1)"/>
+<buff id="MetabolizeLotusExtract" buffif="CTRlotus greater 0" debuffif="CTRlotus less 1" actions="increment(CTRlotus, -1, 3, 0, 0);min(CTRlotus, 0) "/>
+
+<buff id="lotusEuphoricBuff" duration="0" mutex="lotusPoisonBuff" buffif="CTRlotus gequal 2" debuffif="CTRlotus lequal 1" actions="increment(fatigue, -0.5, 50t, 0, 0)" icon="ui_game_symbol_drunk" name_key="Lotus Euphoria" description_key="A euphoric sensation washes over you and you get tired slower and heal faster" tooltip_key="A little more couldnt hurt">
+	<modify id="3" buff="brokenLeg" tickrate="2"/>
+	<modify id="4" buff="sprainedLeg" tickrate="2"/>
+</buff>
+<buff id="lotusPoisonBuff" duration="0" buffif="CTRlotus gequal 61" debuffif="CTRlotus lequal 60" actions="increment(fatigue, 0.25, 50t, 0, 0);debuff(lotusEuphoricBuff)"
+	castsound="Player_*sick5" causes="lotusExtract"
+	type="disease" icon="ui_game_symbol_skull" name_key="Lotus Poisoning" description_key="Euphoric but dangerous" tooltip_key="You are not feeling well">
+	<modify id="0" stat="health" amount="-1" rate="20"/>
+	<modify id="1" stat="speedmodifier" setValue="0.70"/>
+</buff>
+<buff id="lotusDeath" buffif="CTRlotus gequal 100" actions="setvar(CTRlotus, 0);setvar(fatigue, 0);kill"/>
+
+<buff id="Cocaine" duration="10" stack="reset" name_key="Cocaine" description_key="Cocaine is a hell of a drug" tooltip_key="Cocaine is a hell of a drug" icon="ui_game_symbol_run">
+	<modify id="0" stat="speedmodifier" modifyMaxValue="2"/>
+	<modify id="1" stat="speedmodifier" modifyValue="0.6"/>
+</buff>
+
 <!--Nutrition System 100% uptime for metabolic rates 1/1 ratio with food loss-->
 <buff id="Single5" mutex="NutritionHighLock,Single10,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.02, 1t, 0, 0)" icon="server_refresh" name_key="Half Peak Single" description_key="You are at half peak Single and countering base nutritional loss." tooltip_key="Half Peak Single" /><!--never/counter-->
 <buff id="Single10" mutex="NutritionHighLock,Bifecta5,Bifecta10,Trifecta5,Trifecta10" duration="0" debuffif="Nutrition gequal 648" actions="increment(Nutrition, 0.022, 1t, 0, 0);debuff(Single5)" icon="ui_game_symbol_ping" name_key="Full Peak Single" description_key="You are at full peak Single and will slowly increase nutrition by 1 stage every 30 days provided you do not have any negative food groups." tooltip_key="Full Peak Single" /><!--1/30Day-->
@@ -790,6 +810,8 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="MetabolizeMeat8" requires="hypo2" buffif="Meat greater 0" debuffif="Meat less 1" actions="increment(Meat, -1, 11t, 0, 0);min(Meat, 0) "/>
 <buff id="MetabolizeMeat9" requires="hypo3" buffif="Meat greater 0" debuffif="Meat less 1" actions="increment(Meat, -1, 5t, 0, 0);min(Meat, 0) "/>
 
+<buff id="1eatMeat" duration="1" actions="increment(Meat, 0.4, 0, 0, 1);max(Meat, 50)"/>
+<buff id="4eatMeat" duration="1" actions="increment(Meat, 1.6, 0, 0, 1);max(Meat, 50)"/>
 <buff id="5eatMeat" duration="1" actions="increment(Meat, 2, 0, 0, 1);max(Meat, 50)"/>
 <buff id="8eatMeat" duration="1" actions="increment(Meat, 3.2, 0, 0, 1);max(Meat, 50)"/>
 <buff id="12eatMeat" duration="1" actions="increment(Meat, 4.8, 0, 0, 1);max(Meat, 50)"/>
@@ -809,6 +831,7 @@ snowberryPlant feeds you for 90 sec. -->
 <buff id="MetabolizeGrain9" requires="hypo3" buffif="Grain greater 0" debuffif="Grain less 1" actions="increment(Grain, -1, 6t, 0, 0);min(Grain, 0) "/>
 
 <buff id="2eatGrain" duration="1" actions="increment(Grain, 2, 0, 0, 1);max(Grain, 50)"/>
+<buff id="4eatGrain" duration="1" actions="increment(Grain, 4, 0, 0, 1);max(Grain, 50)"/>
 <buff id="5eatGrain" duration="1" actions="increment(Grain, 5, 0, 0, 1);max(Grain, 50)"/>
 <buff id="6eatGrain" duration="1" actions="increment(Grain, 6, 0, 0, 1);max(Grain, 50)"/>
 <buff id="7eatGrain" duration="1" actions="increment(Grain, 7, 0, 0, 1);max(Grain, 50)"/>
